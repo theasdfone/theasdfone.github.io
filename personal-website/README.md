@@ -1,0 +1,1 @@
+Hello and welcome to my personal project! This website contains a summary of my work experience and projects I'm currently working on.

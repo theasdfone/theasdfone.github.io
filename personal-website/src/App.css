@@ -1,0 +1,22 @@
+.first-half {
+    background-color: #323639;
+    height: 50%;
+    width: 100%;
+    display: flex;
+}
+
+.second-half {
+    height:50%;
+}
+
+.containers {
+    list-style-type: none;
+    color: white;
+    height: 100%;
+    flex: 1;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
