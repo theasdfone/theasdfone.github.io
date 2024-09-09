@@ -95,6 +95,7 @@ function App() {
               </div>
             </div>
           </div>
+          <footer className='footer'>@2024 / Sam Zhu</footer>
         </div>
       </div>
     </div>

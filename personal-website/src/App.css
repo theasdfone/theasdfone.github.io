@@ -165,4 +165,9 @@ a:hover .dashboard-images{
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     color: white;
     text-decoration: none;
-  }
+}
+
+.footer{
+    position: relative;
+    bottom:30px;
+}
