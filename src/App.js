@@ -1,101 +1,111 @@
+import { useEffect, useRef, useState } from 'react';
 import './App.css';
 import ProfilePic from './static/pfp.png';
-import Texada from './static/texada.jpg';
-import AutoTrader from './static/autotrader.jpg';
-import Shoplogix from './static/shoplogix.jpg';
-import Westar from './static/westar.jpg';
 import Resume from './static/Resume.pdf';
-import Filler from './static/filler.png';
 
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef(null);
+  const hamburgerRef = useRef(null);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  useEffect(() => {
+    // Prevent scrolling when menu is open on mobile
+    if (menuOpen && window.innerWidth <= 768) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    // Cleanup function
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [menuOpen]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        !hamburgerRef.current.contains(event.target)
+      ) {
+        setMenuOpen(false);
+      }
+    };
+
+    // Only add listener if menu is open
+    if (menuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    // Cleanup
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [menuOpen]);
+
   return (
-    <div className='main'>
-      <nav className='navbar'>
-        <div className='navbar-container-1'>
-          <h1 className='nav-header'>Hi, I'm Sam</h1>
+    <div>
+      <nav ref={menuRef} className='navbar'>
+        <div className='navbar-top'>
+          <button
+            ref={hamburgerRef}
+            className='hamburger'
+            onClick={toggleMenu}
+          >
+            ☰
+          </button>
         </div>
-        <div className='navbar-container-2'>
-          <ul className='navbar-menu'>
-            <li><a href='http://linkedin.com/in/theasdfone'>Linkedin</a></li>
-            <li><a href='http://github.com/theasdfone'>Github</a></li>
-            <li><a onClick={() => {window.open(Resume);}}>Resume</a></li>
+
+        <div ref={menuRef} className={`navbar-menu ${menuOpen ? 'open' : ''}`}>
+          <ul className='navbar-menu-list'>
+            <li><a href='/home'>Home</a></li>
+            <li><a href='/workhistory'>Work History</a></li>
+            <li><a href='/projects'>Projects</a></li>
+            <li><a href='/contact'>Get in Touch</a></li>
+            <li><a onClick={() => { window.open(Resume); }}>Resume</a></li>
+          </ul>
+        </div>
+        <div ref={menuRef} className='navbar-socials'>
+          <ul className='navbar-socials-list'>
+            <li><a href='http://linkedin.com/in/theasdfone'><FaLinkedin /></a></li>
+            <li><a href='http://github.com/theasdfone'><FaGithub /></a></li>
           </ul>
         </div>
       </nav>
-      <div className='main-body'>
-        <div className='main-content'>
-          <div className='main-persona'>
-            <div className='main-persona-description'>
-              <h1 className='main-persona-header'>Sam Zhu</h1>
-              <h1 className='main-persona-second-header'>About Me</h1>
-              <div className='main-persona-paragraph'>
-                <p>
-                  I'm a fourth-year engineering student at the University of Waterloo. I have a passion for hiking, drawing and coding. 
-                  I enjoy working on side projects and doodling in my free time.
-                </p>
-                <p>
-                  My tech stack currently consists of Reactjs, Angularjs, .NET, Spring/Springboot along with some experience in writing scripts in SQL. 
-                  I'm currently learning about software architecture and solutions in AWS which is something I'm keen to practice more with. 
-                  I strive to keep myself up to date with my knowledge and constantly look for ways to challenge myself.
-                </p>
-              </div>
-            </div>
-            <img src={ProfilePic} className='profile-picture' alt='Profile Picture'/>
-          </div>
-          <div className='main-work-experience'>
-            <div>
-              <h1 className='main-section-header'>Work Experience</h1>
-              <div>
-                <div className='work-box-sizes'>
-                  <a className='image-container'>
-                      <img src={Texada} alt="lifestyle" className="dashboard-images"/>
-                      <div className="dashboard-text-container">
-                          <h3 className="dashboard-text">Texada</h3>
-                      </div>
-                  </a>
-                  <a className='image-container'>
-                      <img src={AutoTrader} alt="lifestyle" className="dashboard-images" />
-                      <div className="dashboard-text-container">
-                          <h3 className="dashboard-text">AutoTrader</h3>
-                      </div>
-                  </a>
-                  <a className='image-container'>
-                      <img src={Shoplogix} alt="lifestyle" className="dashboard-images" />
-                      <div className="dashboard-text-container">
-                          <h3 className="dashboard-text">Shoplogix</h3>
-                      </div>
-                  </a>
-                  <a className='image-container'>
-                      <img src={Westar} alt="lifestyle" className="dashboard-images" />
-                      <div className="dashboard-text-container">
-                          <h3 className="dashboard-text">Westar Travel</h3>
-                      </div>
-                  </a>
-                </div>
-              </div>
+      <div className='main-content'>
+        <div className='main-persona'>
+          <div className='main-persona-description'>
+            <h1 className='main-persona-header'>Sam Zhu</h1>
+            <div className='main-persona-paragraph'>
+              <p>
+                I'm a fourth-year engineering student at the University of Waterloo. I have a passion for hiking, drawing and coding.
+                I enjoy working on side projects and doodling in my free time.
+              </p>
+              <p>
+                My tech stack currently consists of Reactjs, Angularjs, .NET, Spring/Springboot along with some experience in writing scripts in SQL.
+                I'm currently learning about software architecture and solutions in AWS which is something I'm keen to practice more with.
+                I strive to keep myself up to date with my knowledge and constantly look for ways to challenge myself.
+              </p>
             </div>
           </div>
-          <div className='main-project-section'>
-            <div>
-              <h1 className='main-section-header'>Projects</h1>
-              <div className='work-box-sizes'>
-                <a className='image-container' href="https://github.com/theasdfone/ResourceEdu">
-                    <img src={Filler} alt="black" className="dashboard-images" />
-                    <div className="dashboard-text-container">
-                        <h3 className="dashboard-text">ResourceEDU</h3>
-                    </div>
-                </a>
-                <a className='image-container' href="https://github.com/theasdfone/CI-CD-Pipeline">
-                    <img src={Filler} alt="black" className="dashboard-images" />
-                    <div className="dashboard-text-container">
-                        <h3 className="dashboard-text">CICD Pipeline</h3>
-                    </div>
-                </a>
-              </div>
-            </div>
+          <div className='profile-picture'>
+            <img src={ProfilePic} alt='Profile Picture' />
           </div>
-          <footer className='footer'>@2024 / Sam Zhu</footer>
+        </div>
+        <div>
+          <h3>Worked With</h3>
+          <div className='main-companies'>
+            <button className='main-companies-button' href=''>Texada Software</button>
+            <button className='main-companies-button' href=''>AutoTrader</button>
+            <button className='main-companies-button' href=''>Shoplogix</button>
+            <button className='main-companies-button' href=''>Westar Travel Ltd</button>
+          </div>
         </div>
       </div>
     </div>
