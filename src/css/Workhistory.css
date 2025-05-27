@@ -1,0 +1,93 @@
+
+.work-main-content {
+    padding: 150px 10% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.work-title-container {
+    padding: 0 20% 0 20%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.work-title {
+    font-size: clamp(1rem, 10vw, 4rem);
+    margin: 0;
+}
+
+.work-company-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8rem;
+    margin-top: 100px;
+}
+
+.work-company-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.work-company-texada-tag {
+    background-color: #FFF6E9;
+    color: orange;
+    display: inline-block;
+    padding: 5px;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.work-company-autotrader-tag {
+    background-color: #FFCDCD;
+    color: red;
+    display: inline-block;
+    padding: 5px;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.work-company-shoplogix-tag {
+    background-color: #D0E6FF;
+    color: blue;
+    display: inline-block;
+    padding: 5px;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.work-company-westar-tag {
+    background-color: #E0FFF8;
+    color: green;
+    display: inline-block;
+    padding: 5px;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.work-company-description {
+    flex: 1;
+}
+
+.work-company-images {
+    display: block;
+    max-width: 500px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .work-title-container {
+        padding: 0;
+    }
+
+    .work-company-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .work-company-images {
+        order: 1;
+    }
+}

@@ -1,0 +1,75 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.main-content {
+    padding: 150px 10% 0;
+}
+
+.main-persona {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 4rem;
+}
+
+.profile-picture {
+    max-width: 375px;
+    height: auto;
+}
+
+.main-persona-header {
+    font-size: clamp(3rem, 10vw, 6rem);
+    margin: 0;
+}
+
+.main-persona-paragraph {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.main-companies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.main-companies-button {
+    color: #9C9C9C;
+    background-color: #1B1B1B;
+    border-radius: 5px;
+    padding: 10px;
+    flex: 1 1 100px;
+    max-width: 160px;
+    height: 60px;
+}
+
+@media (max-width: 768px) {
+    .main-persona {
+        flex-direction: column;
+    }
+
+    .main-companies-button {
+        max-width: 100px;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+    .main-content {
+        padding: 200px 10% 0;
+    }
+
+    .profile-picture {
+        max-width: 600px;
+        width: 600px;
+        height: auto;
+    }
+
+    .main-persona {
+        gap: 20rem;
+    }
+}
