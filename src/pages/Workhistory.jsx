@@ -27,7 +27,7 @@ function WorkHistory() {
                                 <h1>Texada Software</h1>
                                 <p>Texada Software focuses on delivering SaaS software for the sales, rentals and services of heavy equipment. It provides dealers with a variety of different tools from management to inventory and sales.</p>
                             </div>
-                            <a href="/temp">
+                            <a href="/#/temp">
                                 <button className="work-company-button texada">My Projects &gt;</button>
                             </a>
                         </div>
@@ -39,7 +39,7 @@ function WorkHistory() {
                                 <h1>Autotrader</h1>
                                 <p>Autotrader is an online marketplace for buying and selling vehicles. Autotrader offers services that help consumers buy cars, sell cars, or research car purchases. For buyers, the site offers listings of new and used vehicles for sale from dealers and private sellers.</p>
                             </div>
-                            <a href="/temp">
+                            <a href="/#/temp">
                                 <button className="work-company-button autotrader">My Projects &gt;</button>
                             </a>
                         </div>
@@ -57,7 +57,7 @@ function WorkHistory() {
                                 <h1>Shoplogix</h1>
                                 <p>Shoplogix develops cloud-based software used by manufacturers to monitor and improve production performance. While backed by a large parent company, Shoplogix functions independently and maintains its own technical and operational teams.</p>
                             </div>
-                            <a href="/temp">
+                            <a href="/#/temp">
                                 <button className="work-company-button shoplogix">My Projects &gt;</button>
                             </a>
                         </div>
@@ -69,7 +69,7 @@ function WorkHistory() {
                                 <h1>Westar Travel</h1>
                                 <p>Westar is a Calgary-based tour operator specializing in guided travel throughout the Canadian Rockies, including Banff, Jasper, Yoho, and surrounding areas. The company operates its own fleet of vehicles, offers multilingual guides, and provides both day trips and multi-day tours.</p>
                             </div>
-                            <a href="/temp">
+                            <a href="/#/temp">
                                 <button className="work-company-button westar">My Projects &gt;</button>
                             </a>
                         </div>

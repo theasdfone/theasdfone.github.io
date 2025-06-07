@@ -64,9 +64,9 @@ function Navbar() {
                 <div ref={menuRef} className={`navbar-menu ${menuOpen ? 'open' : ''}`}>
                     <ul className='navbar-menu-list'>
                         <li><a href='/'>Home</a></li>
-                        <li><a href='/work'>Work History</a></li>
-                        <li><a href='/projects'>Projects</a></li>
-                        <li><a href='/contact'>Get in Touch</a></li>
+                        <li><a href='/#/work'>Work History</a></li>
+                        <li><a href='/#/projects'>Projects</a></li>
+                        <li><a href='/#/contact'>Get in Touch</a></li>
                         <li><a onClick={() => { window.open(Resume); }}>Resume</a></li>
                     </ul>
                 </div>
