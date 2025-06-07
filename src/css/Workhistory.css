@@ -1,6 +1,5 @@
-
 .work-main-content {
-    padding: 150px 10% 0;
+    padding: 150px 15% 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,6 +10,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    font-size: larger;
 }
 
 .work-title {
@@ -23,59 +23,91 @@
     flex-direction: column;
     align-items: center;
     gap: 8rem;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .work-company-container {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
 }
 
-.work-company-texada-tag {
+.work-company-tag {
+    display: inline-block;
+    padding: 5px;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.work-company-tag.texada {
     background-color: #FFF6E9;
     color: orange;
-    display: inline-block;
-    padding: 5px;
-    margin: 0;
-    border-radius: 10px;
+
 }
 
-.work-company-autotrader-tag {
+.work-company-tag.autotrader {
     background-color: #FFCDCD;
     color: red;
-    display: inline-block;
-    padding: 5px;
-    margin: 0;
-    border-radius: 10px;
 }
 
-.work-company-shoplogix-tag {
+.work-company-tag.shoplogix {
     background-color: #D0E6FF;
     color: blue;
-    display: inline-block;
-    padding: 5px;
-    margin: 0;
-    border-radius: 10px;
 }
 
-.work-company-westar-tag {
+.work-company-tag.westar {
     background-color: #E0FFF8;
     color: green;
-    display: inline-block;
-    padding: 5px;
-    margin: 0;
-    border-radius: 10px;
 }
 
 .work-company-description {
+    display: flex;
+    flex-direction: column;
     flex: 1;
+    font-size: larger;
 }
 
 .work-company-images {
-    display: block;
-    max-width: 500px;
+    flex: 1;
+    max-width: 400px;
+}
+
+img {
+    width: 100%;
     height: auto;
 }
+
+button {
+    width: 100%;
+    height: auto;
+}
+
+.work-company-button {
+    color: white;
+    font-size: medium;
+    max-width: 164.89px;
+    height: 38px;
+    border-radius: 5px;
+    margin-top: 50px;
+    border: none;
+}
+
+.work-company-button.texada {
+    background-color: orange;
+
+}
+
+.work-company-button.autotrader {
+    background-color: red;
+}
+
+.work-company-button.shoplogix {
+    background-color: blue;
+}
+
+.work-company-button.westar {
+    background-color: #2AB090;
+}
+
 
 @media (max-width: 768px) {
     .work-title-container {
@@ -84,10 +116,14 @@
 
     .work-company-container {
         flex-direction: column;
-        align-items: center;
+    }
+
+    .work-company-list {
+        margin-top: 30px;
+        gap: 5rem;
     }
 
     .work-company-images {
-        order: 1;
+        order: -1;
     }
 }

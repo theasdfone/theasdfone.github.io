@@ -51,11 +51,11 @@ function Navbar() {
     return (
         <div>
             <nav ref={menuRef} className='navbar'>
-                <div className='navbar-top'>
+                <div className='hamburger-container'>
                     <button
                         ref={hamburgerRef}
-                        className='hamburger'
                         onClick={toggleMenu}
+                        className='hamburger'
                     >
                         ☰
                     </button>

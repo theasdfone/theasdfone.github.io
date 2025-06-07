@@ -13,13 +13,14 @@ function Home() {
             <h1 className='main-persona-header'>Sam Zhu</h1>
             <div className='main-persona-paragraph'>
               <p>
-                I'm a fourth-year engineering student at the University of Waterloo. I have a passion for hiking, drawing and coding.
-                I enjoy working on side projects and doodling in my free time.
+                Hello! I’m a recent graduate from the Biomedical Engineering program at UWaterloo.
+                I have a focus on computing with courses in computer networks, operating systems, performance programming, design patterns and software architecture.
+                I've worked professionally at 4 different companies across a variety of different industries.
               </p>
               <p>
-                My tech stack currently consists of Reactjs, Angularjs, .NET, Spring/Springboot along with some experience in writing scripts in SQL.
-                I'm currently learning about software architecture and solutions in AWS which is something I'm keen to practice more with.
-                I strive to keep myself up to date with my knowledge and constantly look for ways to challenge myself.
+                My professional skillset ranges from angular, and reactjs on the frontend and .NET and springboot on the backend.
+                For class projects, python was a common language that was used to complete projects. I’ve also setup infrastructure on AWS for my personal projects.
+                I have a solutions architect certificate from one of my coop terms.
               </p>
             </div>
           </div>
