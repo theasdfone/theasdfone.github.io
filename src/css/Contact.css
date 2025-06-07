@@ -1,5 +1,5 @@
 .contact-main-content {
-    padding: 150px 10% 50px;
+    padding: 150px 20% 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,10 +10,37 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    font-size: larger;
+    font-size: large;
 }
 
 .contact-title {
     font-size: clamp(1rem, 10vw, 4rem);
     margin: 0;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-top: auto;
+}
+
+.contact-details-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .contact-main-content {
+        padding: 150px 10% 50px;
+    }
+
+    .contact-details {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
 }

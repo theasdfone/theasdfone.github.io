@@ -18,9 +18,9 @@ function Home() {
                 I've worked professionally at 4 different companies across a variety of different industries.
               </p>
               <p>
-                My professional skillset ranges from angular, and reactjs on the frontend and .NET and springboot on the backend.
-                For class projects, python was a common language that was used to complete projects. I’ve also setup infrastructure on AWS for my personal projects.
-                I have a solutions architect certificate from one of my coop terms.
+                My professional skillset ranges from Angular, Reactjs, .NET and Springboot.
+                I've used languages like C, Python and Rust informally for course work and I’ve setup infrastructure on AWS before for some personal projects.
+                Please feel free to <a href='/contact'>contact me</a> if you feel I can help!
               </p>
             </div>
           </div>
