@@ -20,7 +20,7 @@ function Home() {
               <p>
                 My professional skillset ranges from Angular, Reactjs, .NET and Springboot.
                 I've used languages like C, Python and Rust informally for course work and I’ve setup infrastructure on AWS before for some personal projects.
-                Please feel free to <a href='/contact'>contact me</a> if you feel I can help!
+                Please feel free to <a href='/#/contact'>contact me</a> if you feel I can help!
               </p>
             </div>
           </div>
